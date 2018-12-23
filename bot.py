@@ -33,9 +33,22 @@ async def roles(ctx):
 
 
 @bot.command()
+@commands.has_role('Role-Test')
 async def kick_user(ctx, member: discord.Member):
-    '''Hopefully mod only can kick'''
     await member.kick() 
 
 
-bot.run('NDcxNDI1NzM1ODExMTM3NTQ2.Dv2fZQ.1wz1BI15LxB_S0JugMIdGqKwkXU')
+@bot.command()
+@commands.has_role('Role-Test')
+async def kick1(ctx, member : discord.Member, *, reason : str):
+    await ctx.guild.kick(member)
+    await member.send(reason)
+   
+
+@bot.command()
+async def dm(ctx, member : discord.Member, msg : str):
+    await member.send(msg)    
+
+
+
+bot.run('')

@@ -56,9 +56,6 @@ async def roles(ctx):
     await ctx.send(f' {ctx.guild.roles} ')
 
 
-#bot and user needs permissions
-
-   
 @bot.command()
 async def dm(ctx, member : discord.Member, msg : str):
     if member is None:
@@ -69,7 +66,5 @@ async def dm(ctx, member : discord.Member, msg : str):
     
     else:
         await member.send(msg)   
-
-
 
 bot.run('NDgzMTI1NDcyNzgwMjIyNDk1.Dyjupw.NG7uJ8uDsmV-Dtgw8R77xTsu0RY', bot=True, reconnect=True)

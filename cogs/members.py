@@ -13,7 +13,11 @@ class MembersCog:
     @commands.guild_only()
     async def joined(self, ctx, *, member: discord.Member):
         """Says when a member joined."""
-        await ctx.send(f'{member.display_name} joined on {member.joined_at}')
+        if member is None:
+            await ctx.send("You haven't specified a member!")
+
+        else:
+            await ctx.send(f'{member.display_name} joined on {member.joined_at}')
 
     @commands.command(name='top_role', aliases=['toprole'])
     @commands.guild_only()

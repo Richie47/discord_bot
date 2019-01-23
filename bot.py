@@ -67,4 +67,4 @@ async def dm(ctx, member : discord.Member, msg : str):
     else:
         await member.send(msg)   
 
-bot.run('NDgzMTI1NDcyNzgwMjIyNDk1.Dyjupw.NG7uJ8uDsmV-Dtgw8R77xTsu0RY', bot=True, reconnect=True)
+bot.run('', bot=True, reconnect=True)
